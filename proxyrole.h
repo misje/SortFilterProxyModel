@@ -24,6 +24,8 @@ public:
     QVariant roleData(const QModelIndex& sourceIndex, const QQmlSortFilterProxyModel& proxyModel);
     virtual void proxyModelCompleted(const QQmlSortFilterProxyModel& proxyModel);
 
+    static void registerTypes();
+
 protected:
     void invalidate();
 

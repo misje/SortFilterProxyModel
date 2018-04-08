@@ -3,6 +3,7 @@
 
 namespace qqsfpm {
 
+void registerSorterTypes();
 /*!
     \qmltype Sorter
     \inqmlmodule SortFilterProxyModel
@@ -97,6 +98,10 @@ int Sorter::compare(const QModelIndex &sourceLeft, const QModelIndex &sourceRigh
 void Sorter::proxyModelCompleted(const QQmlSortFilterProxyModel& proxyModel)
 {
     Q_UNUSED(proxyModel)
+}
+
+void Sorter::registerTypes() {
+    registerSorterTypes();
 }
 
 bool Sorter::lessThan(const QModelIndex &sourceLeft, const QModelIndex &sourceRight, const QQmlSortFilterProxyModel& proxyModel) const

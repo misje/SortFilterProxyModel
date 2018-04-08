@@ -3,6 +3,8 @@
 
 namespace qqsfpm {
 
+void registerFilterTypes();
+
 /*!
     \qmltype Filter
     \inqmlmodule SortFilterProxyModel
@@ -72,6 +74,10 @@ bool Filter::filterAcceptsRow(const QModelIndex &sourceIndex, const QQmlSortFilt
 void Filter::proxyModelCompleted(const QQmlSortFilterProxyModel& proxyModel)
 {
     Q_UNUSED(proxyModel)
+}
+
+void Filter::registerTypes() {
+    registerFilterTypes();
 }
 
 void Filter::invalidate()

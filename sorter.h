@@ -32,6 +32,8 @@ public:
 
     virtual void proxyModelCompleted(const QQmlSortFilterProxyModel& proxyModel);
 
+    static void registerTypes();
+
 Q_SIGNALS:
     void enabledChanged();
     void sortOrderChanged();

@@ -7,6 +7,8 @@
 
 namespace qqsfpm {
 
+void registerQQmlSortFilterProxyModelTypes();
+
 /*!
     \page index.html overview
 
@@ -383,6 +385,15 @@ void QQmlSortFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         connect(sourceModel, &QAbstractItemModel::rowsInserted, this, &QQmlSortFilterProxyModel::initRoles);
     }
     QSortFilterProxyModel::setSourceModel(sourceModel);
+}
+
+void QQmlSortFilterProxyModel::registerTypes()
+{
+    Filter::registerTypes();
+    ProxyRole::registerTypes();
+    Sorter::registerTypes();
+
+    registerQQmlSortFilterProxyModelTypes();
 }
 
 void QQmlSortFilterProxyModel::invalidateFilter()

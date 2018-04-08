@@ -9,6 +9,8 @@
 
 namespace qqsfpm {
 
+void registerProxyRoleTypes();
+
 /*!
     \qmltype ProxyRole
     \inqmlmodule SortFilterProxyModel
@@ -57,6 +59,10 @@ QVariant ProxyRole::roleData(const QModelIndex& sourceIndex, const QQmlSortFilte
 void ProxyRole::proxyModelCompleted(const QQmlSortFilterProxyModel &proxyModel)
 {
     Q_UNUSED(proxyModel)
+}
+
+void ProxyRole::registerTypes() {
+    registerProxyRoleTypes();
 }
 
 void ProxyRole::invalidate()

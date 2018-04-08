@@ -87,6 +87,8 @@ public:
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
+    static void registerTypes();
+
 Q_SIGNALS:
     void countChanged();
 
