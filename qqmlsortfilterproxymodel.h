@@ -89,6 +89,9 @@ public:
 
     static void registerTypes();
 
+public Q_SLOTS:
+    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
+
 Q_SIGNALS:
     void countChanged();
 

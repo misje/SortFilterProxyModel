@@ -396,6 +396,10 @@ void QQmlSortFilterProxyModel::registerTypes()
     registerQQmlSortFilterProxyModelTypes();
 }
 
+void QQmlSortFilterProxyModel::sort(int column, Qt::SortOrder order) {
+    QSortFilterProxyModel::sort(column, order);
+}
+
 void QQmlSortFilterProxyModel::invalidateFilter()
 {
     if (m_completed)
